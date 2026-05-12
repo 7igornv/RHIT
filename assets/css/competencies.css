@@ -1,0 +1,39 @@
+.competencies-container{
+    background-image: url(/assets/img/competenciesScreen.webp);
+    max-width: 2000px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.competencies{
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.competencies-cell{
+    background-image: url(/assets/img/competenciesCell.webp);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-left: 150px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.competencies-container button{
+    width: 500px;
+    height: 57px;
+    margin: 100px 0 30px;
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -1,0 +1,135 @@
+.feedback-section {
+    background-image: url(/assets/img/feedbackScreen.webp);
+    background-size: cover;
+    background-position: center;
+    max-width: 2000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.feedback-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px;
+}
+
+.feedback-right-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feedback-form-group {
+    position: relative;
+}
+
+.feedback-form-input {
+    width: 100%;
+    padding: 18px 24px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #2d3748;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.feedback-form-input:focus {
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.feedback-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.feedback-checkbox-group {
+    margin: 10px 0;
+}
+
+.feedback-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.feedback-checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.feedback-checkmark {
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+}
+
+.feedback-checkbox-label input[type="checkbox"]:checked + .feedback-checkmark {
+    background: #4299e1;
+    border-color: #4299e1;
+}
+
+.feedback-checkbox-label input[type="checkbox"]:checked + .feedback-checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.feedback-checkbox-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.feedback-btn {
+    margin-top: 20px;
+    padding: 20px 40px;
+    font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .feedback-right-section {
+        padding: 30px 20px;
+    }
+    
+    .feedback-right-section h2 {
+        font-size: 24px;
+    }
+    
+    .feedback-form-input {
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+    
+    .feedback-btn {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+}

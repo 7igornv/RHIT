@@ -1,0 +1,146 @@
+.footer {
+  position: relative;
+  background: #051217;
+  padding: 50px;
+  isolation: isolate;
+}
+
+.footer .bg-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer .bg-shapes .shape {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  will-change: transform;
+}
+
+/* ===== РАСПОЛОЖЕНИЕ ФИГУР ===== */
+.shape-1 { top: 3%; left: 10%; }
+.shape-2 { top: 3%; left: 38%; }
+.shape-3 { top: 3%; left: 66%; }
+.shape-4 { top: 3%; left: 88%; }
+
+.shape-5 { top: 28%; left: 5%; }
+.shape-6 { top: 28%; left: 24%; }
+.shape-7 { top: 28%; left: 48%; }
+.shape-8 { top: 28%; left: 72%; }
+.shape-9 { top: 28%; left: 91%; }
+
+.shape-10 { top: 53%; left: 12%; }
+.shape-11 { top: 53%; left: 35%; }
+.shape-12 { top: 53%; left: 60%; }
+.shape-13 { top: 53%; left: 83%; }
+
+.shape-14 { top: 78%; left: 8%; }
+.shape-15 { top: 78%; left: 30%; }
+.shape-16 { top: 78%; left: 55%; }
+.shape-17 { top: 78%; left: 77%; }
+.shape-18 { top: 78%; left: 93%; }
+
+/* ===== ФИГУРЫ ===== */
+.shape-1 { background: #0a2d35; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+.shape-2 { background: #07242b; border-radius: 50%; }
+.shape-3 { background: #062028; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+.shape-4 { background: #0a2d35; clip-path: polygon(50% 0%, 85% 50%, 50% 100%, 15% 50%); }
+.shape-5 { background: #07242b; clip-path: polygon(0% 0%, 100% 0%, 50% 100%); }
+.shape-6 { background: #062028; clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
+.shape-7 { background: #0a2d35; border-radius: 50%; }
+.shape-8 { background: #07242b; clip-path: polygon(50% 0%, 100% 70%, 50% 100%, 0% 70%); }
+.shape-9 { background: #062028; clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); }
+.shape-10 { background: #0a2d35; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+.shape-11 { background: #07242b; border-radius: 50%; }
+.shape-12 { background: #062028; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+.shape-13 { background: #0a2d35; clip-path: polygon(0% 0%, 100% 0%, 50% 100%); }
+.shape-14 { background: #07242b; clip-path: polygon(0% 0%, 100% 50%, 0% 100%); }
+.shape-15 { background: #062028; border-radius: 50%; }
+.shape-16 { background: #0a2d35; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+.shape-17 { background: #07242b; clip-path: polygon(50% 0%, 100% 100%, 0% 100%); }
+.shape-18 { background: #062028; clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); }
+
+/* ===== АНИМАЦИЯ ===== */
+@keyframes slideRotateLeft {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(-35px) rotate(-90deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes slideRotateRight {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(35px) rotate(90deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+.shape-1 { animation: slideRotateLeft 9s ease-in-out infinite; }
+.shape-2 { animation: slideRotateRight 11s ease-in-out infinite; }
+.shape-3 { animation: slideRotateLeft 8s ease-in-out infinite; }
+.shape-4 { animation: slideRotateRight 10s ease-in-out infinite; }
+.shape-5 { animation: slideRotateLeft 12s ease-in-out infinite; }
+.shape-6 { animation: slideRotateRight 7s ease-in-out infinite; }
+.shape-7 { animation: slideRotateLeft 9.5s ease-in-out infinite; }
+.shape-8 { animation: slideRotateRight 8.5s ease-in-out infinite; }
+.shape-9 { animation: slideRotateLeft 10.5s ease-in-out infinite; }
+.shape-10 { animation: slideRotateRight 9s ease-in-out infinite; }
+.shape-11 { animation: slideRotateLeft 11.5s ease-in-out infinite; }
+.shape-12 { animation: slideRotateRight 8s ease-in-out infinite; }
+.shape-13 { animation: slideRotateLeft 10s ease-in-out infinite; }
+.shape-14 { animation: slideRotateRight 12.5s ease-in-out infinite; }
+.shape-15 { animation: slideRotateLeft 7.5s ease-in-out infinite; }
+.shape-16 { animation: slideRotateRight 9.5s ease-in-out infinite; }
+.shape-17 { animation: slideRotateLeft 8.5s ease-in-out infinite; }
+.shape-18 { animation: slideRotateRight 11s ease-in-out infinite; }
+.footer-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-column-left {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-column-right {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}
+
+.footer-phone {
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+}
+
+.address {
+    font-style: normal;
+}

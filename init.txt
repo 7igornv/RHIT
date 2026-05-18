@@ -1,0 +1,7 @@
+extension=sqlite3          # Для работы с SQLite базой данных
+extension=pdo_sqlite       # PDO драйвер для SQLite
+extension=mbstring 
+extension=gd               # Для работы с изображениями (если понадобится)
+extension=fileinfo         # Для определения типа файлов
+extension=json             # Для работы с JSON (обычно встроен)
+extension=session          # Для сессий админки

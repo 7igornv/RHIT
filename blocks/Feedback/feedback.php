@@ -20,8 +20,8 @@
                             name="name" 
                             class="feedback-form-input" 
                             placeholder="Ваше имя"
-                            required
                         >
+                        <div class="error-message" id="nameError" style="color: #ff6b6b; font-size: 12px; margin-top: 5px;"></div>
                     </div>
 
                     <div class="feedback-form-group">
@@ -31,8 +31,8 @@
                             name="phone" 
                             class="feedback-form-input" 
                             placeholder="Номер телефона"
-                            required
                         >
+                        <div class="error-message" id="phoneError" style="color: #ff6b6b; font-size: 12px; margin-top: 5px;"></div>
                     </div>
 
                     <div class="feedback-form-group">
@@ -42,8 +42,8 @@
                             name="email" 
                             class="feedback-form-input" 
                             placeholder="Электронная почта"
-                            required
                         >
+                        <div class="error-message" id="emailError" style="color: #ff6b6b; font-size: 12px; margin-top: 5px;"></div>
                     </div>
 
                     <div class="feedback-form-group">
@@ -51,10 +51,10 @@
                             id="message" 
                             name="message" 
                             class="feedback-form-input feedback-form-textarea" 
-                            placeholder="Ваше сообщение"
+                            placeholder="Ваше сообщение" 
                             rows="4"
-                            required
                         ></textarea>
+                        <div class="error-message" id="messageError" style="color: #ff6b6b; font-size: 12px; margin-top: 5px;"></div>
                     </div>
 
                     <div class="feedback-form-group feedback-checkbox-group">
@@ -63,11 +63,11 @@
                                 type="checkbox" 
                                 id="agreement" 
                                 name="agreement"
-                                required
                             >
                             <span class="feedback-checkmark"></span>
                             <span class="feedback-checkbox-text">я соглашаюсь на обработку моих персональных данных согласно условиям, определенным Политикой в отношении обработки ПД ООО "РХИТ"</span>
                         </label>
+                        <div class="error-message" id="agreementError" style="color: #ff6b6b; font-size: 12px; margin-top: 5px;"></div>
                     </div>
 
                     <button type="submit" class="feedback-btn">Оставить заявку</button>
@@ -76,49 +76,6 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('feedbackForm').addEventListener('submit', async function(e) {
-            e.preventDefault(); 
-            
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value,
-                agreement: document.getElementById('agreement').checked
-            };
-            
-            if (!formData.agreement) {
-                alert('Пожалуйста, согласитесь на обработку персональных данных');
-                return;
-            }
-            
-           
-            console.log('Отправка данных:', formData);
-            
-            try {
-                const response = await fetch('send_feedback.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                if (response.ok) {
-                    alert('Сообщение отправлено успешно!');
-                    this.reset();
-                } else {
-                    alert('Ошибка при отправке');
-                }
-            } catch (error) {
-                console.error('Ошибка:', error);
-                alert('Произошла ошибка при отправке');
-            }
-            
-            alert('Форма отправлена! (демо-режим)');
-            this.reset();
-        });
-    </script>
+    <script src="blocks/Feedback/feedback.js"></script>
 </body>
 </html>

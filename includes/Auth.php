@@ -1,7 +1,7 @@
 <?php
 class Auth {
     private static $users = [
-        'admin' => '12345'  // логин => пароль
+        'admin' => '12345'
     ];
     
     private static function startSession() {

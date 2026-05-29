@@ -1,9 +1,15 @@
+<?php
+require_once __DIR__ . '/../../includes/Database.php';
+$db = new Database();
+$competencies = $db->getActiveCompetencies();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Наши компетенции</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/competencies.css">
 </head>
@@ -12,21 +18,14 @@
         <h2>Наши компетенции</h2>
         
         <div class="competencies">
-            <div class="competencies-cell">
-            — управление 50+ активными сетевыми устройствами (Eltex, UserGate, Cisco) —
+            <?php foreach ($competencies as $comp): ?>
+            <div class="competencies-cell" data-id="<?= $comp['id'] ?>">
+                — <?= htmlspecialchars($comp['title']) ?> —
             </div>
-            <div class="competencies-cell">
-            — внедрение и поддержка продуктов 1С: ERP, ЗУП, документооборот —
-            </div>
-            <div class="competencies-cell">
-            — внедрение и поддержка продуктов SearchInform —
-            </div>
-            <div class="competencies-cell">
-            — поддержка корпоративного портала, разработанного для собственных нужд —
-            </div>
+            <?php endforeach; ?>
         </div>
 
-        <button>Оставить заявку</button>
+        <button onclick="document.getElementById('feedbackForm')?.scrollIntoView({behavior: 'smooth'})">Оставить заявку</button>
     </div>
 </body>
 </html>

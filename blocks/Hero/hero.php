@@ -1,5 +1,11 @@
+<?php
+require_once __DIR__ . '/../../includes/Database.php';
+$db = new Database();
+$hero = $db->getHeroSettings();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +14,11 @@
     <link rel="stylesheet" href="assets/css/hero.css">
 </head>
 <body>
-    <div id="hero" class="hero-container">
-        <h1>ООО "РХИТ"</h1>
-        <h3>Современная динамично развивающаяся IT-компания</h3>
-        <button>Оставить заявку</button>
-        <p>Предоставляем сервисы в области информационных технологий <br> Управляем масштабной инфраструктурой и обеспечиваем ее бесперебойную работу</p>
+    <div id="hero" class="hero-container" style="background-image: url('<?= htmlspecialchars($hero['background_image']) ?>');">
+        <h1><?= htmlspecialchars($hero['title']) ?></h1>
+        <h3><?= htmlspecialchars($hero['subtitle']) ?></h3>
+        <button onclick="document.getElementById('feedbackForm')?.scrollIntoView({behavior: 'smooth'})"><?= htmlspecialchars($hero['button_text']) ?></button>
+        <p><?= nl2br(htmlspecialchars($hero['description'])) ?></p>
         <div class="scrol-container">
             <div class="chevron"></div>
             <div class="chevron"></div>

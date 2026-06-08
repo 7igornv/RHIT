@@ -21,12 +21,12 @@
                 <li><a class="header-link" href="#feedbackForm">Помощь</a></li>
                 <li><a class="header-link" href="#footer">Контакты</a></li>
                 <li class="mobile-only">
-                    <a href="#callback" class="header-btn">Оставить заявку</a>
+                    <a href="#feedbackForm" class="header-btn">Оставить заявку</a>
                 </li>
             </ul>
         </nav>
         
-        <a href="#callback" class="header-btn desktop-only">Оставить заявку</a>
+        <a href="#feedbackForm" class="header-btn desktop-only">Оставить заявку</a>
         
         <div class="burger-menu">
             <span></span>

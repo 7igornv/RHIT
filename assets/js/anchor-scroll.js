@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const distance = targetPosition - startPosition;
         let startTime = null;
         
-        // Функция easing для более плавного движения
         function easeInOutCubic(t) {
             return t < 0.5 
                 ? 4 * t * t * t 

@@ -12,3 +12,52 @@
     gap: 50px;
     margin-bottom: 60px;
 }
+
+.clients img{
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 248px;
+    object-fit: contain;
+}
+
+
+
+/* ===== АДАПТАЦИЯ ДЛЯ 768px ===== */
+@media (max-width: 768px) {
+    .clients{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 16px;
+        margin-bottom: 40px;
+    }
+
+    .clients img{
+        width: auto;
+        height: auto;
+        max-width: 200px;
+    }
+
+}
+
+
+
+/* ===== АДАПТАЦИЯ ДЛЯ 360px ===== */
+@media (max-width: 360px) {
+    .clients{
+        gap: 14px;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    .clients img{
+        width: auto;
+        height: auto;
+        max-width: 120px;
+    }
+}
+
+
+
+

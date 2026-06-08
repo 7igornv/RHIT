@@ -1,5 +1,8 @@
 .competencies-container{
+    position: relative;
     background-image: url(/assets/img/competenciesScreen.webp);
+    background-size: cover;
+    background-position: center;
     max-width: 2000px;
     width: 100%;
     height: 100%;
@@ -8,6 +11,20 @@
     align-items: center;
     margin: 10px 0;
 }
+
+.competencies-container::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.competencies-container > *{
+    position: relative;
+    z-index: 1;
+}
+
 
 .competencies{
     max-width: 1240px;
@@ -30,6 +47,18 @@
     font-weight: bold;
 }
 
+
+@media (max-width: 1200px) {
+    .competencies-cell{
+        background-image: none;
+        padding: 0 30px;
+    }
+
+    .competencies-cell{
+        background-color: rgba(0,0,0,0.45);
+    }
+}
+
 .competencies-container button{
     width: 500px;
     height: 57px;
@@ -37,3 +66,38 @@
     font-size: 30px;
     font-weight: bold;
 }
+
+/* ===== АДАПТАЦИЯ ДЛЯ 768px ===== */
+@media (max-width: 768px) {
+    .competencies-cell{
+        height: 70px;
+        font-size: 18px;
+        padding: 0 30px;
+    }
+
+    .competencies-container button{
+        width: 360px;
+        height: 50px;
+        margin: 70px 0 25px;
+        font-size: 24px;
+    }
+}
+
+/* ===== АДАПТАЦИЯ ДЛЯ 360px ===== */
+@media (max-width: 360px) {
+    .competencies-cell{
+        height: 62px;
+        font-size: 15px;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .competencies-container button{
+        width: calc(100% - 40px);
+        max-width: 320px;
+        height: 44px;
+        margin: 50px 0 20px;
+        font-size: 18px;
+    }
+}
+

@@ -144,3 +144,49 @@
 .address {
     font-style: normal;
 }
+
+/* ===== АДАПТАЦИЯ ДЛЯ 768px ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 35px 18px;
+  }
+
+  .footer-container {
+    gap: 20px;
+    font-size: 13px;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+}
+
+/* ===== АДАПТАЦИЯ ДЛЯ 360px ===== */
+@media (max-width: 360px) {
+  .footer {
+    padding: 28px 12px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-column-left,
+  .footer-column-right {
+    width: 100%;
+  }
+
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .footer-link,
+  .footer-phone,
+  .footer-text,
+  .address {
+    font-size: 12px;
+  }
+}
+

@@ -11,12 +11,24 @@
 
 body {
     font-family: montserrat;
-    margin: 0 auto;
+    margin: 0;
     background-color: #093840;
     position: relative;
     overflow-x: hidden;
     min-height: 100vh;
 }
+
+/* Ставит основную верстку в центр независимо от секций */
+main, body > .hero-container,
+body > #services,
+body > #competencies,
+body > #clients,
+body > .feedback-section {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 button {
     background-color: #05327C;
